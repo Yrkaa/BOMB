@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkUserCode() {
         if(code.equals(userCode)){
 
-            bombPlayer = MediaPlayer.create(this, R.raw.bomb_sound);
+            bombPlayer = MediaPlayer.create(this, R.raw.bomb_sound_2);
             if (playingFirst)
                 bombPlayer.start();
             if(bombPlayer.isPlaying())
@@ -165,5 +165,7 @@ public class MainActivity extends AppCompatActivity {
         userCode += s;
         codeTv.setTextColor(Color.BLACK);
         codeTv.setText(userCode);
+        MediaPlayer clickSound = MediaPlayer.create(this, R.raw.btn_click);
+        clickSound.start();
     }
 }
